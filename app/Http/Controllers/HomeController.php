@@ -26,21 +26,6 @@ class HomeController extends Controller
      */
     public function index($search = false)
     {
-        $posts = Post::orderBy('created_at', 'desc')->get();
-
-        return view('home', ['search' => $search, 'posts' => $posts]);
-    }
-
-    public function write(Request $request)
-    {
-        $post = new Post;
-        $post->post_content = $request->post_content;
-        $post->author = Auth::id();
-
-        $post->save();
-
-        Session::flash('alert-success', 'Post saved successfully');
-
-        return redirect('home');
+        return view('home');
     }
 }

@@ -13,20 +13,6 @@
                         {!! Form::submit('Write on the wall !') !!}
                         {!! Form::close() !!}
                     </div>
-                    <div>
-                        @if($search === false)
-                            All posts
-                        @else
-                            All posts containing "{{$search}}"
-                        @endif
-                    </div>
-                    <div>
-                        @foreach($posts as $post)
-                            <b>{{ $post->user->name }}</b> wrotes {{ $post->created_at->diffForHumans() }} :<br>
-                            {{ $post->post_content }}
-                            <hr><br>
-                        @endforeach
-                    </div>
                 </div>
             </div>
         </div>
