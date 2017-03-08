@@ -1,7 +1,7 @@
 ## Configuration
 
 ### Dossier Homestead :
-fichier Homestead.yaml
+fichier **Homestead.yaml**
 
 Editer comme ci-dessous :
 
@@ -18,7 +18,7 @@ databases:
 ```
 
 ### Dossier Code/Ecommerce
-fichier .env
+fichier **.env**
 
 Editer comme ci dessous :
 ```sh
