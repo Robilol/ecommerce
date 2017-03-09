@@ -20,5 +20,11 @@
                 <div class="row product-row">
                     @endif
                     @endforeach
+                    <div class="panel-body">
+                        {!! Form::open(['url' => 'send']) !!}
+                        {!! Form::text('email') !!}
+                        {!! Form::submit('Send !') !!}
+                        {!! Form::close() !!}
+                    </div>
                 </div>
 @endsection

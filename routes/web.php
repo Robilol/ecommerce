@@ -15,6 +15,8 @@
 //    return view('read', ['page_name' => $page_name]);
 //});
 
+Route::post('/send', 'EmailController@send');
+
 Route::get('read/{search?}', 'HomeController@read');
 
 Route::post('write', 'HomeController@write');
