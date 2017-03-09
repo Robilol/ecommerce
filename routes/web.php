@@ -22,6 +22,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('add/{ean?}', 'HomeController@add');
 Route::get('cart', 'CartController@index')->name('cart');
 Route::get('checkout', 'CheckoutController@index')->name('checkout');
+Route::get('backend', 'BackendController@index')->name('backend');
+Route::post('/addProduct', 'BackendController@addProduct');
 Route::get('minus/{rowId?}', 'CartController@minus');
 Route::get('plus/{rowId?}', 'CartController@plus');
 Route::get('remove/{rowId?}', 'CartController@remove');
