@@ -11,9 +11,15 @@
                         <span class="product-name">{{ $product->name }}</span>
                         <p>{{ $product-> description }}</p>
                         <span class="product-price">{{ $product-> price }}€</span>
-                        <a href="/add/{{$product->ean }}" role="button" class="btn btn-default btn-md">
-                            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-                        </a>
+                        @if($product->type == 2)
+                            <a href="/product/{{$product->ean }}" role="button" class="btn btn-info btn-md">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            </a>
+                        @else
+                            <a href="/add/{{$product->ean }}" role="button" class="btn btn-info btn-md">
+                                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                            </a>
+                        @endif
                     </div>
                     @if($loop->iteration % 4 == 0)
                 </div>

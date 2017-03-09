@@ -66,24 +66,15 @@
 </head>
 <body>
 <div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @if (Auth::check())
-                <a href="{{ url('home') }}">Home</a>
-            @else
-                <a href="{{ url('login') }}">Login</a>
-                <a href="{{ url('register') }}">Register</a>
-            @endif
-        </div>
-    @endif
-
     <div class="content">
         <div class="title m-b-md">
             Page Not Found
         </div>
 
+        <img src="https://2.bp.blogspot.com/-MznzWrWdJpM/VqSvFOAimaI/AAAAAAAAAcM/0Fmcxf6sT-8/s1600/fuyez-pauvre-fou_837x627.jpg" alt="">
+
         <div class="links">
-            <a href="{{ url('home') }}">Get back to homepage</a>
+            <a href="{{ url('/') }}">Get back to homepage</a>
         </div>
     </div>
 </div>

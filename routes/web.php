@@ -27,10 +27,5 @@ Route::post('/addProduct', 'BackendController@addProduct');
 Route::get('minus/{rowId?}', 'CartController@minus');
 Route::get('plus/{rowId?}', 'CartController@plus');
 Route::get('remove/{rowId?}', 'CartController@remove');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::get('product/{ean?}', 'ProductController@index');
+Route::post('add', 'ProductController@add');
