@@ -57,7 +57,7 @@
                                         class="glyphicon glyphicon-shopping-cart"></span>Panier</a></li>
                     @else
                         <li><a href="{{ route('login') }}">Mon compte</a></li>
-                        <li><a href="{{ url('cart') }}"><span class="glyphicon glyphicon-shopping-cart"></span>Panier :</a>
+                        <li><a href="{{ url('cart') }}"><span class="glyphicon glyphicon-shopping-cart"></span>Panier</a>
                         </li>
                     @endif
                 </ul>
