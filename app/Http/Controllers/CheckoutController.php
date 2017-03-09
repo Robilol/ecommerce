@@ -7,8 +7,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
-class EmailController extends Controller
+
+class CheckoutController extends Controller
 {
+    public function index(){
+        return view('checkout');
+    }
+
     public function send(Request $request)
     {
         $title = $request->input('title');

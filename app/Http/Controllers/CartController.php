@@ -21,5 +21,6 @@ class CartController extends Controller
         return view('cart')
             ->with('cart', $cart)
             ->with('total', $total);
+
     }
 }

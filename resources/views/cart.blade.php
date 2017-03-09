@@ -39,7 +39,15 @@
             </div>
             <div class="col-md-2 col-sm-12">
                 <h3>Boutons</h3>
-                <button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Commander</button>
+                @foreach($cart as $product)
+                    {{$product->id}}
+
+                @if(isset($product->id))
+                    <a href="{{ url('/checkout') }}"><button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Commander</button></a>
+                @else
+                    <button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Commander</button>
+                @endif
+                @endforeach
                 <button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Actualiser</button>
             </div>
         </div>
