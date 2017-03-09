@@ -25,3 +25,10 @@ Route::get('checkout', 'CheckoutController@index')->name('checkout');
 Route::get('minus/{rowId?}', 'CartController@minus');
 Route::get('plus/{rowId?}', 'CartController@plus');
 Route::get('remove/{rowId?}', 'CartController@remove');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

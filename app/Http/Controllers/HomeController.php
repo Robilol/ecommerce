@@ -6,10 +6,6 @@ use App\Models\Post;
 use App\Models\Product;
 use Gloudemans\Shoppingcart\Facades\Cart;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-
 class HomeController extends Controller
 {
     /**
