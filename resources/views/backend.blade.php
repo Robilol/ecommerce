@@ -7,9 +7,10 @@
 
         <div class="panel-body">
             {!! Form::open(['url' => 'addProduct']) !!}
-            <p>Nom de l'article</p>{!! Form::text('name') !!}
-            <p>Description de l'article</p>{!! Form::text('description') !!}
-            <p>Prix de l'article</p>{!! Form::text('price') !!}<br><br>
+            <p>Nom du produit</p>{!! Form::text('name') !!}
+            <p>Description du produit</p>{!! Form::text('description') !!}
+            <p>Prix du produit</p>{!! Form::text('price') !!}<br><br>
+            {!! Form::file('image') !!}
             {!! Form::submit("Ajouter le produit") !!}
             {!! Form::close() !!}
         </div>

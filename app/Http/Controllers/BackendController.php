@@ -19,13 +19,13 @@ class BackendController extends Controller
         $product->name = $request->name;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->image = 'kebab.jpg';
+        $product->image = $request->image;
         $product->type = 0;
         $product->parent = 0;
 
         $product->save();
 
-        Session::flash('alert-success', "L'article a été mis en ligne");
+        Session::flash('alert-success', "Le produit a été mis en ligne");
 
         return redirect('/backend');
     }
