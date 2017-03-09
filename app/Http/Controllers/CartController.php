@@ -39,6 +39,7 @@ class CartController extends Controller
     public function remove($rowId) {
         $product = Cart::get($rowId);
         Cart::remove($rowId);
+        Session::flash('alert-success', "Le produit a été enlevé du panier");
         return redirect('/cart');
     }
 

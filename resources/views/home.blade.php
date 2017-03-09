@@ -18,7 +18,8 @@
                     @if($loop->iteration % 4 == 0)
                 </div>
                 <div class="row product-row">
-                    @endif
-                    @endforeach
-                </div>
+            @endif
+        @endforeach
+     </div>
+    <div class="pagination"> {{ $products->links() }} </div>
 @endsection
