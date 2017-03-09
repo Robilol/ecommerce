@@ -38,7 +38,11 @@ class HomeController extends Controller
     {
         $product = Product::where('ean', $ean)->first();
         Cart::add($product->id, $product->name, 1, $product->price, ['image' => $product->image])->associate('Product');
-        $this->index();
+        return redirect('/');
+
+    }
+
+    public function update() {
 
     }
 }

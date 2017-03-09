@@ -16,15 +16,12 @@
 //});
 
 Route::post('/send', 'CheckoutController@send');
-
-Route::get('checkout','CheckoutController@index');
-Route::get('read/{search?}', 'HomeController@read');
-
-Route::post('write', 'HomeController@write');
-
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('add/{ean?}', 'HomeController@add');
 Route::get('cart', 'CartController@index')->name('cart');
-
+Route::get('checkout', 'CheckoutController@index')->name('checkout');
+Route::get('minus/{rowId?}', 'CartController@minus');
+Route::get('plus/{rowId?}', 'CartController@plus');
+Route::get('remove/{rowId?}', 'CartController@remove');

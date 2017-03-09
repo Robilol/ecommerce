@@ -24,10 +24,16 @@
                                                                class="img-responsive"></div>
                                     <div class="col-md-2">{{ $product->name }}</div>
                                     <div class="col-md-2">{{ $product->price }}€</div>
-                                    <div class="col-md-2"><input class="form-control" type="number" value="0"></div>
+                                    <div class="col-md-2"><a href="/minus/{{$product->rowId }}" role="button" class="btn btn-default btn-xs">
+                                            <span class="glyphicon glyphicon-minus" aria-hidden="true"></span>
+                                        </a>
+                                        {{ $product->qty }}
+                                        <a href="/plus/{{$product->rowId }}" role="button" class="btn btn-default btn-xs">
+                                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                        </a></div>
                                     <div class="col-md-2">{{ $product->price * $product->qty }}€</div>
                                     <div class="col-md-1">
-                                        <a href="/add/{{$product->ean }}" role="button" class="btn btn-default btn-md">
+                                        <a href="/remove/{{$product->rowId }}" role="button" class="btn btn-default btn-md">
                                             <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                                         </a>
                                     </div>
@@ -40,8 +46,6 @@
             <div class="col-md-2 col-sm-12">
                 <h3>Boutons</h3>
                 @foreach($cart as $product)
-                    {{$product->id}}
-
                 @if(isset($product->id))
                     <a href="{{ url('/checkout') }}"><button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Commander</button></a>
                 @else

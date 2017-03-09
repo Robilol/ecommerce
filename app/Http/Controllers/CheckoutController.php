@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
@@ -29,4 +30,19 @@ class CheckoutController extends Controller
 
         return redirect('/');
     }
+=======
+
+class CheckoutController extends Controller
+{
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function index() {
+
+    }
+
+
+>>>>>>> 8b61a2c8351216214181551e24ba85a00f877edb
 }
