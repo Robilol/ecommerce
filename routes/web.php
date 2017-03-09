@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
-
 //Route::get('page/{page_name?}', function ($page_name = 'Home') {
 //    return view('read', ['page_name' => $page_name]);
 //});
@@ -25,4 +21,7 @@ Route::post('write', 'HomeController@write');
 
 Auth::routes();
 
-Route::get('/home{search?}', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('add/{ean?}', 'HomeController@add');
+Route::get('cart', 'CartController@index')->name('cart');
+

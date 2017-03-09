@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\Product;
+use Gloudemans\Shoppingcart\Facades\Cart;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +19,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -24,8 +27,18 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($search = false)
+    public function index()
     {
-        return view('home');
+        $products = Product::all();
+        return view('home')
+            ->with('products',$products);
+    }
+
+    public function add($ean)
+    {
+        $product = Product::where('ean', $ean)->first();
+        Cart::add($product->id, $product->name, 1, $product->price, ['image' => $product->image])->associate('Product');
+        $this->index();
+
     }
 }

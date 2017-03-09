@@ -1,0 +1,28 @@
+.product-grid .product-row {
+  display: flex;
+  flex-wrap: wrap; }
+  .product-grid .product-row .product {
+    margin-bottom: 22px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column; }
+    .product-grid .product-row .product .product-name, .product-grid .product-row .product p {
+      height: 50px; }
+    .product-grid .product-row .product img {
+      width: 100%; }
+    .product-grid .product-row .product button {
+      margin-bottom: 10px; }
+    .product-grid .product-row .product .product-price {
+      float: right; }
+
+.cart {
+  margin-bottom: 22px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+
+/*# sourceMappingURL=ecommerce.css.map */

@@ -183,6 +183,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Reliese\Coders\CodersServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 
@@ -239,6 +240,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 
     ],
 
