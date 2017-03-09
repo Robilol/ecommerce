@@ -22,4 +22,23 @@ class CartController extends Controller
             ->with('cart', $cart)
             ->with('total', $total);
     }
+
+    public function minus($rowId) {
+        $product = Cart::get($rowId);
+        Cart::update($rowId, $product->qty - 1);
+        return redirect('/cart');
+    }
+
+    public function plus($rowId) {
+        $product = Cart::get($rowId);
+        Cart::update($rowId, $product->qty + 1);
+        return redirect('/cart');
+    }
+
+    public function remove($rowId) {
+        $product = Cart::get($rowId);
+        Cart::remove($rowId);
+        return redirect('/cart');
+    }
+
 }
