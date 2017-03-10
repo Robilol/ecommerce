@@ -52,10 +52,10 @@
                 <h2>Total : {{ $total }}€</h2>
         </span>
             <a href="{{ url('/checkout') }}">
-                <button class="btn btn-default col-md-12 col-sm-6 col-xs-12">Commander</button>
+                <button class="btn btn-info col-md-12 col-sm-6 col-xs-12">Commander</button>
             </a>
         @else
-            <h1>Votre panier est vide :'(</h1>
+            <h1>Votre panier est vide 😱</h1>
         @endif
     </div>
 @endsection
